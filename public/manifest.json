@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Gerador de Documentos",
+  "version": "1.0",
+  "description": "Adiciona um item ao menu de contexto para gerar CPF",
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
