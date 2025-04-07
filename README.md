@@ -1,54 +1,82 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Gerador de Documentos
 
-Currently, two official plugins are available:
+Essa extensão permite gerar **CPFs** e **CNPJs válidos** automaticamente ao clicar com o botão direito em qualquer campo de texto (`input` ou `textarea`) de qualquer site.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- Gera **CPF válido**
+- Gera **CNPJ válido**
+- Cola automaticamente no campo selecionado
+- Acessível via **menu do botão direito (context menu)**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 💾 Instalação
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+#### Antes de tudo clone o repositório ou baixe em formato .zip e extraia os arquivos
+
+Após isso rode os seguintes comandos
+
+```bash
+  npm i
+```
+ou
+```bash
+  yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+E gere o build com 
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+  npm run build
 ```
+
+ou
+
+```bash
+  yarn build
+```
+
+### Adicionando ao seu navegador
+
+#### A extensão funciona apenas em navegadores baseados em chromium como o Google Chrome, Microsoft Edge, Opera, Vivaldi, Brave, Arc entre outros
+
+    1. Acesse: chrome://extensions
+
+    2. Ative o Modo do desenvolvedor (canto superior direito)
+
+    3. Clique em "Carregar sem compactação"
+
+    4. Selecione a pasta dist/
+
+## 🧪 Como usar
+
+Em qualquer site, clique com o botão direito em um campo de texto e passe o mouse em cima de Gerador de Documentos.
+
+No menu que aparece, escolha:
+
+Gerar CPF e colar
+
+Gerar CNPJ e colar
+
+O valor é gerado e colado automaticamente no campo.
+## 🔧 Stack utilizada
+
+Vite
+
+React
+
+TypeScript
+
+Manifest V3 (Chrome Extensions)
+
+
+## 🚘 Roadmap
+
+- Adicionar mais funcionalides como gerar nomes, telefones e endereços
+
+
+## 🤝 Contribuindo
+
+Contribuições são sempre bem-vindas!
+
+Se quiser sugerir melhorias ou novas funcionalidades, fique à vontade pra abrir uma issue ou um pull request.
